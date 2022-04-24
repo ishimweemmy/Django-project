@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'posts.css' %}">
+    <style>
+        body{
+            background: black;
+        }
+        p a{
+            color: white
+        }
+        p a:hover{
+            color: rgb(242, 211, 154);
+            transition: 1s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="body">
+        <div class="nav-bar">
+            <!-- logo -->
+            <div class="logo-container">
+                <a href="#">
+                    <div class="logo">
+                        <div class="left"></div>
+                        <div class="left1"></div>
+                        <div class="right"></div>
+                        <div class="right1"></div>
+                        <div class="right2"></div>
+                    </div>
+                </a>
+                <a href="#"><h1>ENJOY</h1></a>
+            </div>
+
+            <!-- left links -->
+            <div class="left">
+            <a href="#">Home</a>
+            <a href="#">Services</a>
+            <a href="#">About</a>@
+            <a href="#">Posts</a>
+            <a href="login"><b>login</b></a>
+            </div>
+        </div>
+        <div class="blogs-container">
+            <div class="heads">
+                <h2>User: {{ user.username }}</h2>
+                <h1>Post</h1>
+            </div>
+            <div class="blog-outerc">
+                <div class="image-container">
+                    <div class="img"><img src="{{ post.image }}" alt=""></div>
+                </div>
+                <div class="descr-container">
+                    <h2>{{ post.title }}</h2>
+                    <p><a href="">{{ post.description }}</a></p><br>
+                    <b>Date: {{ post.date }}</b>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

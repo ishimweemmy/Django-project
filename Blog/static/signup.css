@@ -1,0 +1,268 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* logo */
+
+.top{
+    width: 100%;
+    height: 10%;
+    background: linear-gradient(90.01deg, rgba(2, 19, 104, 0.459) -66.31%, rgba(2, 19, 104, 0.326) 119.32%, rgba(6, 24, 112, 0.375) 175.09%);
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    width: 6em;
+    height: 4em;
+    display: grid;
+    grid-template-columns: 3fr 3fr;
+    position: relative;
+    overflow: hidden;
+}
+
+.logo-container{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin: 6em;
+}
+
+.logo-container h1{
+    color: white;
+}
+
+.logo-container h1:hover{
+    color: rgba(255, 145, 0, 0.928);
+    transition: 2s ease-in-out;
+    animation: nav 2s ease-in;
+}
+
+@keyframes nav{
+    0%{
+        transform: rotate(0deg)
+    }
+    20%{
+        transform: rotate(2deg)
+    }
+    40%{
+        transform: rotate(-4deg)
+    }
+    60%{
+        transform: rotate(6deg)
+    }
+    80%{
+        transform: rotate(-8deg)
+    }
+    100%{
+        transform: rotate(10deg);
+    transition: 2s ease;
+    }
+}
+
+.logo > .left{
+    width: 3em;
+    height: 2em;
+    background: yellow;
+    box-shadow: 0 10px 10px rgba(0, 16, 236, 0.8);
+    z-index: 1;
+    transform: rotate(-20deg)
+}
+
+.logo > .right{
+    width: 3em;
+    height: 2em;
+    background: rgb(255, 128, 0);
+    box-shadow: 0 10px 10px rgba(0, 16, 236, 0.8);
+    z-index: 1;
+    transform: rotate(-20deg)
+}
+
+.logo > .left1{
+    width: 3em;
+    height: 2em;
+    background: rgb(255, 128, 0);
+    box-shadow: 0 10px 10px rgba(0, 236, 87, 0.8);
+    z-index: 1;
+    transform: rotate(20deg)
+}
+
+.logo > .right1{
+    width: 10em;
+    height: 2em;
+    background: rgba(255, 255, 0, 0.731);
+    box-shadow: 0 10px 10px rgba(0, 236, 87, 0.8);
+    z-index: 1;
+    transform: rotate(20deg)
+}
+
+.logo > .right2{
+    width: 2em;
+    height: 2em;
+    background: rgba(115, 0, 255, 0.759);
+    transform: rotate(20deg);
+    position: absolute;
+    display: flex;
+    align-self: center;
+    left: 1.5em;
+    z-index: 0;
+}
+
+a{
+    text-decoration-line: none;
+}
+
+.outer-container {
+    width: 100%;
+    height: 100vh;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.inner-container{
+    width: 60%;
+    height:70%;
+    background: black;
+    position: absolute;
+    box-shadow: 0 1px 2px rgba(255, 255, 255, 0.7);
+    border-radius: 1%;
+    display: flex;
+    flex-direction: column;
+}
+
+.circle{
+    width: 100%;
+    height: 70%;
+    background: linear-gradient(90.01deg, rgba(2, 19, 104, 0.459) -66.31%, rgba(2, 19, 104, 0.326) 119.32%, rgba(6, 24, 112, 0.375) 175.09%);
+    align-self: flex-start;
+    border-radius: 80%;
+    float: top;
+    margin-top: -20em;
+}
+
+.bottom{
+    width: 100%;
+    height: 90%;
+    display: flex;
+}
+
+.vector-container{
+    width: 40%;
+    height: 98%;
+    background: linear-gradient(90.01deg, rgba(2, 19, 104, 0.459) -66.31%, rgba(2, 19, 104, 0.326) 119.32%, rgba(6, 24, 112, 0.375) 175.09%);
+    border-right: 1px solid rgba(255, 255, 255, 0.208);
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-container{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4em;
+}
+
+.form-container h2{
+    margin: 0 0 20px 0;
+    color: rgb(255, 128, 0);
+}
+
+.form-container p{
+    margin: 0 0 20px 0;
+    color: white;
+}
+
+.form{
+    width: 90%;
+    height: 80%;
+    background: linear-gradient(90.01deg, rgba(2, 19, 104, 0.459) -66.31%, rgba(2, 19, 104, 0.326) 119.32%, rgba(6, 24, 112, 0.375) 175.09%);
+    position: relative;
+    padding: 3em;
+    overflow: hidden
+}
+
+input:not([type='submit']){
+    width: 30em;
+    height: 3em;
+    margin: .75em;
+    border-radius: .5em;
+    text-align: center;
+    border: none
+}
+
+input:not([type='submit']):focus{
+    outline: none;
+}
+
+button{
+    width: 15em;
+    height: 3em;
+    border-radius: .5em;
+    margin: 1em 0em 1em 1em;
+    background: rgb(255, 128, 0);
+    border: none;
+}
+
+fieldset p{
+    color: white;
+    padding-left: 1em;
+}
+
+fieldset p a{
+    color: rgb(255, 128, 0);
+}
+
+button:hover{
+    transition: 1s ease;
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+button:hover b{
+    color: white;
+    transition: 2s ease;
+}
+
+.buttons{
+    display: flex;
+}
+
+#fieldset2> .buttons > button:nth-child(2),#fieldset3> .buttons > button:nth-child(2){
+    width: 13.7em;
+}
+
+#fieldset1{
+    position: absolute;
+    transition: .5s ease;
+}
+
+#fieldset2{
+    position: absolute;
+    left: 500px;
+    transition: .5s ease;
+}
+
+#fieldset3{
+    position: absolute;
+    left: 500px;
+    top: 4em;
+    transition: .5s ease;
+}
+
+fieldset{
+    border: none;
+}
+
+h3{
+    color: white;
+    text-align: center;
+}

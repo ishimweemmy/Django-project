@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'posts.css' %}">
+</head>
+<body>
+    {% csrf_token %}
+    <div class="body">
+        <div class="nav-bar">
+            <!-- logo -->
+            <div class="logo-container">
+                <a href="">
+                    <div class="logo">
+                        <div class="left"></div>
+                        <div class="left1"></div>
+                        <div class="right"></div>
+                        <div class="right1"></div>
+                        <div class="right2"></div>
+                    </div>
+                </a>
+                <a href="#"><h1>ENJOY</h1></a>
+            </div>
+
+            <!-- left links -->
+            <div class="left">
+            <a href="#">Home</a>
+            <a href="#">Services</a>
+            <a href="#">About</a>@
+            <a href="#">Posts</a>
+            <a href="login"><b>login</b></a>
+            </div>
+        </div>
+        <div class="blogs-container">
+            <div class="heads">
+                {% if user.is_authenticated %}
+                <h2>User: {{ user.username }}</h2>
+                {% endif %}
+                <h1>TOP POSTS</h1>
+            </div>
+            {%  for post in posts reversed %}
+            <div class="blog-outerc">
+                <div class="image-container">
+                    <div class="img"><img src="{{ post.image }}" alt="image"></div>
+                </div>
+                <div class="descr-container">
+                    <h2>{{ post.title }}</h2>
+                    <p><a href="view_post/{{ post.id }}">{{ post.description | truncatewords:30 }}</a></p><br>
+                    <b>Date: {{ post.date }}</b><br><br>
+                    <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <script src="{% static './../../static/index.js' %}"></script>
+</body>
+</html>
